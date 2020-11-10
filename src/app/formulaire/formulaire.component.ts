@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulaire',
@@ -7,12 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulaireComponent implements OnInit {
 
-  constructor() { }
+  beerForm: FormGroup;
+  constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.beerForm = this.createBeerForm();
   }
 
-  onSubmit(f){
-    console.log(f.form.value);
+  createBeerForm(): FormGroup {
+    return this._formBuilder.group({
+      name: ['', Validators.required],
+    })
   }
+
+  addBeer(): void {
+    console.log(this.beerForm.getRawValue());
+    
+  }
+
+  // onSubmit(f){
+  //   console.log(f.form.value);
+  // }
 }
