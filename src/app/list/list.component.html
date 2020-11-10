@@ -1,0 +1,11 @@
+<div class="container">
+<h1 style="text-align: center;">BEERS</h1>
+
+  <ul class="list-group" style="text-align: center;" *ngFor="let beer of beers$">
+    <li class="list-group-item">
+      <a style="text-decoration: none;" [routerLink]="['/detail', beer.id]">
+        {{ beer.name }}
+      </a>
+    </li>
+  </ul>
+</div>
