@@ -1,13 +1,15 @@
-<div class="container">
+<div class="container" style="text-align: center;">
   <h1>Form</h1>
-  <a href="" class="btn btn-primary">Back Beers List</a>
+  <a href="" class="btn btn-success">Back Beers List</a>
   <!-- <form (ngSubmit)="onSubmit(f)" #f="ngForm">
     <label>Nom</label>
     <input type="text" name="nom" [(ngModel)]="nom"/>
     <button type="submit">Envoyer</button>
   </form> -->
   <form [formGroup]="beerForm" name="beerForm">
-    <input formControlName="name" required/>
-    <button (click)="addBeer()">Envoi</button>
+    <div class="form-group">
+      <input class="form-control" style="margin: 20px;" formControlName="name" required/>
+      <button class="btn btn-primary" (click)="addBeer()">Envoi</button>
+    </div>
   </form>
 </div>
