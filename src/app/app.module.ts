@@ -7,17 +7,25 @@ import { ListComponent } from './list/list.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './detail/detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatListModule } from '@angular/material/list';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

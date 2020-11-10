@@ -1,6 +1,10 @@
 <div class="container">
 <h1 style="text-align: center;">BEERS</h1>
 
+  <a style="text-decoration: none; color: red" [routerLink]="['/formulaire']">
+    <h2>Form</h2>
+  </a>
+
   <ul class="list-group" style="text-align: center;" *ngFor="let beer of beers$">
     <li class="list-group-item">
       <a style="text-decoration: none;" [routerLink]="['/detail', beer.id]">
@@ -9,3 +13,7 @@
     </li>
   </ul>
 </div>
+
+<!-- <mat-list>
+  <mat-list-item *ngFor="let beer of beers$">{{beer.name}}</mat-list-item>
+</mat-list> -->

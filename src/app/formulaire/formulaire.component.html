@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Form</h1>
+  <a href="" class="btn btn-primary">Back Beers List</a>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <label>Nom</label>
+    <input type="text" name="nom" [(ngModel)]="nom"/>
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
